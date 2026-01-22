@@ -50,7 +50,6 @@ class List:
                 common_unique.append(i)
 
         print(f'common elements in two list is : {common_unique}')
-
     
     def binary_search(self,search_lst, target):
         n = len(search_lst)
@@ -84,7 +83,11 @@ class List:
             freq[i] = freq.get(i,0) + 1
         print(freq)
 
-
+    def even(self,n):
+        if n % 2 == 0:
+            return True
+        else:
+            False
 
 
 
