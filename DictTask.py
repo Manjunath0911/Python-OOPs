@@ -28,5 +28,16 @@ class Dictionary:
         return dict1
     
     def sort_by_value(self,dict1):
-        sorted_item = dict(sorted(dict1.items(), key = lambda x:x[1])) 
+        sorted_item = dict(sorted(dict1.items(), key = lambda x:x[1], reverse=True)) 
         return sorted_item
+    
+    def duplicate_value(self,dict1):
+        seen = set()
+        duplicates = set()
+        for v in dict1.values():
+            if v in seen:
+                duplicates.add(v)
+            else:
+                seen.add(v)
+
+        return duplicates
